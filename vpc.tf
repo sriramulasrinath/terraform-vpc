@@ -66,7 +66,7 @@ resource "aws_subnet" "Database" {
     var.common_tags,
     var.Database_subnet_cidrs_tags,
     {
-    Name = "${local.resource_name}-Database-${local.az_names[count.index]}"
+    Name = "${local.resource_name}-database-${local.az_names[count.index]}"
   }
   )
 }
@@ -77,7 +77,7 @@ resource "aws_db_subnet_group" "default" {
 
   tags = merge(
     var.common_tags,
-    var.Database_subnet_group_tags,
+    var.database_subnet_group_tags,
     {
         Name = "${local.resource_name}"
     }
@@ -140,7 +140,7 @@ resource "aws_route_table" "Database" {
     var.common_tags,
     var.Database_route_table_tags,
     {
-    Name = "${local.resource_name}-Database" #expense-dev --> which is project_name
+    Name = "${local.resource_name}-database" #expense-dev --> which is project_name
   }
   )
 }

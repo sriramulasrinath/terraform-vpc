@@ -63,7 +63,7 @@ variable "Database_subnet_cidrs_tags" {
   default = {}
 }
 ###Database subnet groups ###
-variable "Database_subnet_group_tags"{
+variable "database_subnet_group_tags"{
     default = {}
 ###natgateway  ###
 }
